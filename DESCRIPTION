@@ -1,10 +1,11 @@
 Package: SimBM
 Version: 0.1
-Author: Jianchang Hu
+Date: 17/4/2015
+Title: Simulation of 2D Brownian motion
+Description: Simulation and plot of 2D Brownian motion
+Author: Jianchang Hu <huj@stat.wisc.edu>
 Maintainer: Jianchang Hu <huj@stat.wisc.edu>
-License: MIT
-Title: 2D Brownian Motion for BMI 826 Homework
-Description: Simulate and Plot 2D Brownian Motion
+License: MIT + file LICENSE
 URL: https://github.com/Jianchang-HU/826_Package
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
