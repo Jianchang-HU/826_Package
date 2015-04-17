@@ -1,0 +1,18 @@
+---
+title: "SimBM"
+author: "Jianchang Hu"
+date: "16/4/2015"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Intro of Package "SimBM"}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8](inputenc)
+---
+
+Simple demonstration of package "SimBM".
+
+```{r}
+library(SimBM)
+y <- SimBM(n=1000, sigma=1.2)
+PlotBM(y)
+```
