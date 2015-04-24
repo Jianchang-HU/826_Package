@@ -48,13 +48,19 @@ SimBM = function(n, sigma=1){
 
 PlotBM = function(x){
     # This function plots two-dimensional Brownian Motion
-    n = dim(x)[1]
     
-    plot(x, type="l", main="Two-Dimensional Brownian Motion", xlab="1st Dimension", ylab="2nd Dimension")
+    if(dim(x)[2] != 2){
+        return("The data is not in the right form, the number of column should be 2!")
+    } else{
     
-    # Indicate starting and ending points
-    points(x[1,1],x[1,2], pch=2)
-    points(x[n,1],x[n,2], pch=7)
+        n = dim(x)[1] # the length of the BM
     
-    legend("topright", c("Start", "End"), pch=c(2,7))
+        plot(x, type="l", main="Two-Dimensional Brownian Motion", xlab="1st Dimension", ylab="2nd Dimension")
+    
+        # Indicate starting and ending points
+        points(x[1,1],x[1,2], pch=2)
+        points(x[n,1],x[n,2], pch=7)
+    
+        legend("topright", c("Start", "End"), pch=c(2,7))
+    }
 }
