@@ -7,5 +7,6 @@ Author: Jianchang Hu <huj@stat.wisc.edu>
 Maintainer: Jianchang Hu <huj@stat.wisc.edu>
 License: MIT + file LICENSE
 URL: https://github.com/Jianchang-HU/826_Package
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown,
+    testthat
 VignetteBuilder: knitr
