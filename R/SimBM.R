@@ -11,7 +11,6 @@
 #' y <- SimBM(n=10000, sigma=1.2)
 #' 
 #' @export
-
 SimBM = function(n, sigma=1){
     # This function simulates two-dimensional Brownian Motion
     
@@ -23,7 +22,7 @@ SimBM = function(n, sigma=1){
     } else {
         x0 = matrix( rnorm(2, mean=0, sd=1), 2, 1)  # generate starting point from std normal
         
-        error = matrix( rnorm(2*n, mean=0, sd=sigma), 2, n)  # generate error process
+        error = matrix( rnorm(2*(n-1), mean=0, sd=sigma), 2, n-1)  # generate error process
         
         x = apply(cbind(x0, error), 1, cumsum)  # construct the two-dim BM
         #colnames(x) = c("1st_Dim", "2nd_Dim")
@@ -40,12 +39,13 @@ SimBM = function(n, sigma=1){
 #' 
 #' @param x 2-D Brownian motion.
 #' 
+#' @return None, unless there is any error message.
+#' 
 #' @examples
 #' y <- SimBM(n=10000, sigma=1.2)
 #' PlotBM(y)
 #' 
 #' @export
-
 PlotBM = function(x){
     # This function plots two-dimensional Brownian Motion
     

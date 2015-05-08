@@ -9,6 +9,9 @@ PlotBM(x)
 \arguments{
 \item{x}{2-D Brownian motion.}
 }
+\value{
+None, unless there is any error message.
+}
 \description{
 Plot two-dimensional Brownian motion
 }
