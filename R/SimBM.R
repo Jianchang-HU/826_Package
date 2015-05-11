@@ -16,9 +16,9 @@ SimBM = function(n, sigma=1){
     
     # Check the inputs are valid
     if (n<=0) {
-        return(paste("Input length for Brownian motion ", n," is illegal, use positive number!", sep=""))
+        stop("Input length for Brownian motion ", n," is illegal, use positive number!")
     } else if (sigma <=0) {
-        return(paste("Input sigma ", sigma," for Brownian motion is illegal, use positive number!", sep=""))
+        stop("Input sigma ", sigma," for Brownian motion is illegal, use positive number!")
     } else {
         x0 = matrix( rnorm(2, mean=0, sd=1), 2, 1)  # generate starting point from std normal
         
@@ -50,7 +50,7 @@ PlotBM = function(x){
     # This function plots two-dimensional Brownian Motion
     
     if(dim(x)[2] != 2){
-        return("The data is not in the right form, the number of column should be 2!")
+        stop("The data is not in the right form, the number of column should be 2!")
     } else{
     
         n = dim(x)[1] # the length of the BM
